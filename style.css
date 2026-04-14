@@ -226,3 +226,8 @@ footer strong { color: var(--primary); }
 @media (max-width: 768px) {
     .projects-grid, .skills-grid, .misc-grid { grid-template-columns: 1fr; }
 }
+
+/* Project Links */
+.project-links { margin-top: auto; padding-top: 1.5rem; }
+.btn-project { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border: 1px solid var(--surface-border); border-radius: 4px; color: var(--text-main); font-family: var(--font-mono); font-size: 0.85rem; text-decoration: none; transition: var(--transition); }
+.btn-project:hover { background: rgba(0, 255, 202, 0.1); border-color: var(--primary); color: var(--primary); transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0, 255, 202, 0.1); }
