@@ -5,244 +5,246 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sumit Srivastava | DevOps Engineer</title>
     <meta name="description" content="Portfolio of Sumit Srivastava, a DevOps Engineer specializing in Kubernetes, Docker, CI/CD, and Cloud.">
+    <!-- Standard system fonts for body, Fira Code for code blocks -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="mesh-bg"></div> <!-- Dynamic Mesh Background -->
-    
-    <!-- Floating Kubernetes/Docker dynamic icons -->
-    <div class="floating-icons">
-        <i class="fab fa-docker float-1"></i>
-        <i class="fas fa-dharmachakra float-2"></i> <!-- K8s wheel style -->
-        <i class="fas fa-server float-3"></i>
-        <i class="fas fa-network-wired float-4"></i>
-    </div>
-
-    <nav class="navbar">
-        <div class="logo">Sumit<span>.sh</span> <i class="fas fa-terminal blink"></i></div>
+    <nav class="navbar border-bottom">
+        <div class="logo">
+            <i class="fas fa-terminal header-icon"></i> sumit-sh
+        </div>
         <ul class="nav-links">
-            <li><a href="#skills">~/skills</a></li>
-            <li><a href="#projects">~/projects</a></li>
-            <li><a href="#experience">~/experience</a></li>
-            <li><a href="#misc">~/achievements</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#misc">Education</a></li>
         </ul>
     </nav>
 
-    <main>
+    <main class="container">
         <!-- Hero Section -->
         <section id="hero" class="hero">
-            <div class="hero-content fade-in-up">
-                <div class="terminal-badge">root@devops-server:~#</div>
-                <h1>Hi, I'm <span class="highlight">Sumit Srivastava</span></h1>
-                <h2 class="typing-container"><span id="typewriter"></span><span class="cursor">_</span></h2>
-                <p>Architecting resilient infrastructure, optimizing CI/CD pipelines, and writing robust automation scripts.</p>
+            <div class="hero-content">
+                <span class="badge">devops/profile.md</span>
+                <h1>Sumit Srivastava</h1>
+                <h2 class="subtitle">Cloud & Systems Reliability Engineer</h2>
+                <p>Architecting highly available resilient infrastructure, optimizing continuous delivery pipelines, and scaling systems natively on the cloud.</p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> Deploy Projects</a>
-                    <a href="mailto:sumitsrivastava074@gmail.com" class="btn btn-secondary"><i class="fas fa-envelope"></i> Contact</a>
+                    <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Infrastructure</a>
+                    <a href="mailto:sumitsrivastava074@gmail.com" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact Me</a>
                 </div>
                 <div class="social-links">
-                    <a href="https://github.com/sumit2703s" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/sumit-srivastava-0863b2247" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/sumit2703s" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i> github.com/sumit2703s</a>
+                    <a href="https://linkedin.com/in/sumit-srivastava-0863b2247" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 </div>
             </div>
+            
             <div class="hero-graphic">
-               <div class="code-block glass">
-                   <div class="window-controls">
-                       <span></span><span></span><span></span>
+               <div class="code-editor panel">
+                   <div class="editor-header border-bottom">
+                       <span class="dot close"></span>
+                       <span class="dot min"></span>
+                       <span class="dot max"></span>
+                       <span class="file-name">deployment.yml</span>
                    </div>
-                   <pre><code><span class="keyword">apiVersion</span>: apps/v1
+                   <div class="editor-body">
+<pre><code><span class="keyword">apiVersion</span>: apps/v1
 <span class="keyword">kind</span>: Deployment
 <span class="keyword">metadata</span>:
-  <span class="keyword">name</span>: sumit-portfolio
+  <span class="keyword">name</span>: portfolio-app
 <span class="keyword">spec</span>:
-  <span class="keyword">replicas</span>: 10
+  <span class="keyword">replicas</span>: 3
   <span class="keyword">template</span>:
     <span class="keyword">spec</span>:
       <span class="keyword">containers</span>:
-      - <span class="keyword">name</span>: devops-engineer
-        <span class="keyword">image</span>: kubernetes/docker:latest
+      - <span class="keyword">name</span>: engineer
+        <span class="keyword">image</span>: sumit/devops:latest
         <span class="keyword">ports</span>:
         - <span class="keyword">containerPort</span>: 80</code></pre>
+                   </div>
                </div>
             </div>
         </section>
 
         <!-- About/Skills Section -->
-        <section id="skills" class="skills-section fade-in-up hidden">
+        <section id="skills" class="skills-section">
             <div class="section-title">
-                <h2>Technical <span class="highlight">Stack</span></h2>
+                <h2>Technical Stack</h2>
             </div>
             <div class="skills-grid">
-                <div class="skill-card glass">
-                    <i class="fas fa-server"></i>
-                    <h3>Containers & Orchestration</h3>
-                    <p>Docker, Kubernetes, Helm</p>
-                    <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                <div class="skill-card panel">
+                    <div class="skill-header">
+                        <i class="fas fa-server icon-blue"></i>
+                        <h3>Containers & Orchestration</h3>
+                    </div>
+                    <p class="text-muted">Docker, Kubernetes, Helm</p>
                 </div>
-                <div class="skill-card glass">
-                    <i class="fas fa-code-branch"></i>
-                    <h3>CI/CD & Virtualization</h3>
-                    <p>Jenkins, Git, GitHub Actions</p>
-                    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                <div class="skill-card panel">
+                    <div class="skill-header">
+                        <i class="fas fa-code-branch icon-green"></i>
+                        <h3>CI/CD & Virtualization</h3>
+                    </div>
+                    <p class="text-muted">Jenkins, Git, GitHub Actions</p>
                 </div>
-                <div class="skill-card glass">
-                    <i class="fas fa-cloud"></i>
-                    <h3>Cloud Infrastructure</h3>
-                    <p>AWS (EC2, S3, VPC, IAM), Terraform</p>
-                    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                <div class="skill-card panel">
+                    <div class="skill-header">
+                        <i class="fas fa-cloud icon-orange"></i>
+                        <h3>Cloud Infrastructure</h3>
+                    </div>
+                    <p class="text-muted">AWS (EC2, S3, VPC, IAM), Terraform</p>
                 </div>
-                <div class="skill-card glass">
-                    <i class="fas fa-terminal"></i>
-                    <h3>Scripting & Automation</h3>
-                    <p>Python, Bash, Shell Scripting</p>
-                    <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+                <div class="skill-card panel">
+                    <div class="skill-header">
+                        <i class="fas fa-terminal icon-gray"></i>
+                        <h3>Scripting & Automation</h3>
+                    </div>
+                    <p class="text-muted">Python, Bash, Shell Scripting</p>
                 </div>
-                <div class="skill-card glass">
-                    <i class="fas fa-database"></i>
-                    <h3>Databases & Caching</h3>
-                    <p>Redis, MySQL, MongoDB</p>
-                    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                <div class="skill-card panel">
+                    <div class="skill-header">
+                        <i class="fas fa-database icon-red"></i>
+                        <h3>Databases & Caching</h3>
+                    </div>
+                    <p class="text-muted">Redis, MySQL, MongoDB</p>
                 </div>
-                <div class="skill-card glass">
-                    <i class="fab fa-linux"></i>
-                    <h3>Systems Administration</h3>
-                    <p>Linux (Ubuntu/RHEL), Monitoring</p>
-                    <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                <div class="skill-card panel">
+                    <div class="skill-header">
+                        <i class="fab fa-linux icon-yellow"></i>
+                        <h3>Systems Administration</h3>
+                    </div>
+                    <p class="text-muted">Linux (Ubuntu/RHEL), Monitoring</p>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="projects-section fade-in-up hidden">
+        <section id="projects" class="projects-section">
             <div class="section-title">
-                <h2>Deployed <span class="highlight">Infrastructure</span></h2>
+                <h2>Deployed Infrastructure</h2>
             </div>
             <div class="projects-grid">
                 <!-- NEW FASTAPI PROJECT -->
-                <div class="project-card glass">
-                    <div class="project-content">
-                        <h3>Scalable Fast-URL Shortener</h3>
-                        <div class="project-tags">
-                            <span>FastAPI</span><span>Redis</span><span>Vercel</span><span>Render</span><span>Python</span>
-                        </div>
-                        <p class="opensource-tag">Multi-Server Deployment</p>
-                        <ul>
-                            <li>Developed a high-performance URL shortening API using <strong>FastAPI</strong> and integrated <strong>Redis</strong> for ultra-fast caching.</li>
-                            <li>Implemented a scalable decoupled architecture: deployed backend on <strong>Render</strong> and lightweight frontend on <strong>Vercel</strong>.</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/sumit2703s/URL-SHORTNER" target="_blank" class="btn-project"><i class="fab fa-github"></i> Repository</a>
-                        </div>
+                <div class="project-card panel">
+                    <div class="project-header">
+                        <h3><i class="fas fa-archive text-muted"></i> Scalable Fast-URL Shortener</h3>
+                        <span class="status-badge"><span class="dot-green"></span> Live</span>
+                    </div>
+                    <p class="project-desc text-muted">Developed a high-performance URL shortening API with decoupled server architecture.</p>
+                    <div class="project-tags">
+                        <span>FastAPI</span><span>Redis</span><span>Vercel</span><span>Render</span>
+                    </div>
+                    <div class="project-links border-top">
+                        <a href="https://github.com/sumit2703s/URL-SHORTNER" target="_blank" class="btn-link"><i class="fab fa-github"></i> Repository</a>
                     </div>
                 </div>
 
                 <!-- Project 1 -->
-                <div class="project-card glass">
-                    <div class="project-content">
-                        <h3>EasyShop K8s</h3>
-                        <div class="project-tags">
-                            <span>Docker</span><span>GitHub Actions</span><span>K8s</span><span>Helm</span>
-                        </div>
-                        <p class="opensource-tag">Microservices Architecture</p>
-                        <ul>
-                            <li>Built automated CI/CD pipeline using GitHub Actions to support continuous delivery.</li>
-                            <li>Containerized using multi-stage Docker builds, slashing image size by 88%.</li>
-                            <li>Managed orchestration with Helm charts and configured HPA.</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/sumit2703s/EasyShop" target="_blank" class="btn-project"><i class="fab fa-github"></i> Repository</a>
-                        </div>
+                <div class="project-card panel">
+                    <div class="project-header">
+                        <h3><i class="fas fa-archive text-muted"></i> EasyShop K8s</h3>
+                        <span class="status-badge"><span class="dot-green"></span> Microservices</span>
+                    </div>
+                    <p class="project-desc text-muted">Automated CI/CD pipeline using GitHub Actions. Containerized multi-stage Docker builds mapped with Helm.</p>
+                    <div class="project-tags">
+                        <span>Docker</span><span>Actions</span><span>K8s</span><span>Helm</span>
+                    </div>
+                    <div class="project-links border-top">
+                        <a href="https://github.com/sumit2703s/EasyShop" target="_blank" class="btn-link"><i class="fab fa-github"></i> Repository</a>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card glass">
-                    <div class="project-content">
-                        <h3>HA Shop AWS</h3>
-                        <div class="project-tags">
-                            <span>Docker</span><span>Kubernetes</span><span>GitHub Actions</span><span>AWS</span>
-                        </div>
-                        <p class="opensource-tag">Production Infrastructure</p>
-                        <ul>
-                            <li>Provisioned highly available infrastructure natively on AWS environments.</li>
-                            <li>Containerized legacy applications utilizing Docker and Kubernetes for zero-downtime rolling updates.</li>
-                            <li>Accelerated build cycles by 40% through extensive layer caching techniques.</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/sumit2703s/online_shoping-app" target="_blank" class="btn-project"><i class="fab fa-github"></i> Repository</a>
-                        </div>
+                <div class="project-card panel">
+                    <div class="project-header">
+                        <h3><i class="fas fa-archive text-muted"></i> HA Shop AWS</h3>
+                        <span class="status-badge"><span class="dot-green"></span> Production</span>
+                    </div>
+                    <p class="project-desc text-muted">Provisioned highly available infrastructure natively on AWS. Zero-downtime rolling updates via Kubernetes.</p>
+                    <div class="project-tags">
+                        <span>Docker</span><span>Kubernetes</span><span>AWS</span>
+                    </div>
+                    <div class="project-links border-top">
+                        <a href="https://github.com/sumit2703s/online_shoping-app" target="_blank" class="btn-link"><i class="fab fa-github"></i> Repository</a>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card glass">
-                    <div class="project-content">
-                        <h3>Enterprise Jenkins</h3>
-                        <div class="project-tags">
-                            <span>Jenkins</span><span>Docker</span><span>Git</span><span>Bash</span>
-                        </div>
-                        <p class="opensource-tag">CI/CD Automation</p>
-                        <ul>
-                            <li>Designed robust 3-stage CI/CD pipeline automating build, test, and deploy flow on Jenkins.</li>
-                            <li>Standardized environment runtime configurations across dev, staging, and production using containerization.</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/sumit2703s/two-tier-flask-app" target="_blank" class="btn-project"><i class="fab fa-github"></i> Repository</a>
-                        </div>
+                <div class="project-card panel">
+                    <div class="project-header">
+                        <h3><i class="fas fa-archive text-muted"></i> Enterprise Jenkins</h3>
+                        <span class="status-badge"><span class="dot-green"></span> CI/CD</span>
+                    </div>
+                    <p class="project-desc text-muted">Designed robust 3-stage CI/CD pipeline automating build, test, and deploy flow on Jenkins.</p>
+                    <div class="project-tags">
+                        <span>Jenkins</span><span>Git</span><span>Bash</span>
+                    </div>
+                    <div class="project-links border-top">
+                        <a href="https://github.com/sumit2703s/two-tier-flask-app" target="_blank" class="btn-link"><i class="fab fa-github"></i> Repository</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="experience-section fade-in-up hidden">
+        <section id="experience" class="experience-section">
             <div class="section-title">
-                <h2>Production <span class="highlight">Experience</span></h2>
+                <h2>Experience</h2>
             </div>
-            <div class="centered-timeline">
-                <div class="timeline-item glass">
-                    <div class="timeline-status"><i class="fas fa-check-circle"></i></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Oct 2025 — Present <span class="pulse-dot"></span></div>
-                        <h3>DevOps Engineer</h3>
-                        <h4>NFC Kota (Quantum Edge Technologies) - Rawatbhata, Rajasthan</h4>
-                        <ul class="centered-list">
-                            <li>Engineered CI/CD pipelines securing continuous delivery for core production applications.</li>
-                            <li>Administered and monitored 3 concurrent enterprise bare-metal Linux servers.</li>
-                            <li>Architected deployments for 5+ containerized apps leveraging Docker networks.</li>
-                            <li>Automated system maintenance routines via Python & Bash, saving 3+ hours weekly.</li>
-                            <li>Proactively responded to infrastructure alerts, troubleshooting OS performance bottlenecks.</li>
-                        </ul>
+            <div class="experience-list">
+                <div class="experience-card panel border-left-accent">
+                    <div class="exp-header">
+                        <div>
+                            <h3>DevOps Engineer</h3>
+                            <h4 class="text-muted">NFC Kota (Quantum Edge Technologies) - Rajasthan</h4>
+                        </div>
+                        <div class="exp-date badge">Oct 2025 — Present</div>
                     </div>
+                    <ul class="exp-tasks text-muted">
+                        <li>Engineered CI/CD pipelines securing continuous delivery for core production applications.</li>
+                        <li>Administered and monitored 3 concurrent enterprise bare-metal Linux servers.</li>
+                        <li>Architected deployments for 5+ containerized apps leveraging Docker networks.</li>
+                        <li>Automated system maintenance routines via Python & Bash, saving 3+ hours weekly.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Hackathons & Education Section (Restored) -->
-        <section id="misc" class="misc-section fade-in-up hidden">
-            <div class="section-title">
-                <h2>Education & <span class="highlight">Achievements</span></h2>
-            </div>
-            <div class="misc-grid">
-                <div class="misc-card glass">
-                    <h3><i class="fas fa-trophy"></i> Hackathons & Tech Competitions</h3>
-                    <ul class="clean-list">
-                        <li><strong>Finalist</strong>, HACKIITK — IIT Kanpur (May 2026)</li>
-                        <li><strong>Finalist</strong>, HACKIITK — IIT Kanpur (May 2025)</li>
-                        <li><strong>Finalist</strong>, Pears 2 Pears Global Hackathon — GDG Lucknow (May 2025)</li>
-                        <li><strong>Semi-Finalist</strong>, Hack4Bihar.live — SR Institute, Lucknow (May 2025)</li>
+        <!-- Hackathons & Education Section -->
+        <section id="misc" class="misc-section">
+            <div class="split-layout">
+                <div class="panel">
+                    <h3 class="panel-title border-bottom"><i class="fas fa-trophy"></i> Tech Competitions</h3>
+                    <ul class="list-group">
+                        <li class="list-item">
+                            <span class="highlight">Finalist</span>, HACKIITK <span class="text-muted">— IIT Kanpur (May 2026)</span>
+                        </li>
+                        <li class="list-item border-top">
+                            <span class="highlight">Finalist</span>, HACKIITK <span class="text-muted">— IIT Kanpur (May 2025)</span>
+                        </li>
+                        <li class="list-item border-top">
+                            <span class="highlight">Finalist</span>, Pears 2 Pears Global Hackathon <span class="text-muted">— GDG Lucknow (May 2025)</span>
+                        </li>
+                        <li class="list-item border-top">
+                            <span class="highlight">Semi-Finalist</span>, Hack4Bihar.live <span class="text-muted">— SR Institute (May 2025)</span>
+                        </li>
                     </ul>
                 </div>
-                <div class="misc-card glass">
-                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                    <ul class="clean-list">
-                        <li><strong>Bachelor of Computer Applications</strong><br>University of Lucknow (2022–2025)</li>
-                        <li><strong>Intermediate</strong><br>Dalimss Sunbeam School (2021)</li>
-                        <li><strong>High School</strong><br>Dalimss Sunbeam School (2019)</li>
+                <div class="panel">
+                    <h3 class="panel-title border-bottom"><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <ul class="list-group">
+                        <li class="list-item">
+                            <strong>Bachelor of Computer Applications</strong><br><span class="text-muted">University of Lucknow (2022–2025)</span>
+                        </li>
+                        <li class="list-item border-top">
+                            <strong>Intermediate</strong><br><span class="text-muted">Dalimss Sunbeam School (2021)</span>
+                        </li>
+                        <li class="list-item border-top">
+                            <strong>High School</strong><br><span class="text-muted">Dalimss Sunbeam School (2019)</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -250,10 +252,11 @@
 
     </main>
 
-    <footer>
-        <p><i class="fas fa-terminal blink"></i> 2025 Sumit Srivastava | System status: <strong style="color:var(--primary)">Operational</strong> | Uptime: <span id="uptime"></span></p>
+    <footer class="border-top">
+        <div class="container footer-content text-muted">
+            <p>2026 © Sumit Srivastava</p>
+            <p><span class="dot-green"></span> All systems operational.</p>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
