@@ -133,7 +133,17 @@ section { padding: 7rem 2rem; max-width: 80rem; margin: 0 auto; }
 .code-block .keyword { color: #ff7b72; }
 
 /* Skills Section - Responsive Auto-fit */
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 2rem; }
+.skills-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+}
+
+@media (max-width: 900px) {
+    .skills-grid { 
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    }
+}
 .skill-card { position: relative; overflow: hidden; }
 .skill-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem; }
 .skill-card h3 { margin-bottom: 0.5rem; font-size: 1.4rem; font-family: var(--font-mono); font-weight: 600;}
