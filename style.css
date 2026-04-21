@@ -154,8 +154,8 @@ section { padding: 7rem 2rem; max-width: 80rem; margin: 0 auto; }
 /* Projects Section - Responsive Auto-fit */
 .projects-grid { 
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); 
-    gap: 1.2rem; 
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr)); 
+    gap: 1.5rem; 
     align-items: stretch;
 }
 .project-card.glass { padding: 1.5rem; display: flex; flex-direction: column; }
