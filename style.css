@@ -122,8 +122,8 @@ section { padding: 7rem 2rem; max-width: 80rem; margin: 0 auto; }
 .social-links a:hover { color: var(--primary); transform: translateY(-3px); }
 
 /* Code Block Graphic */
-.hero-graphic { flex: 1; min-width: 350px; display: flex; justify-content: center; align-items: center; }
-.code-block { width: 100%; max-width: 38rem; background: rgba(5, 12, 22, 0.8); border: 2px solid var(--surface-border); border-radius: 12px; overflow: hidden; padding: 0 !important; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6); }
+.hero-graphic { flex: 1.2; min-width: 450px; display: flex; justify-content: center; align-items: center; }
+.code-block { width: 100%; max-width: 45rem; background: rgba(5, 12, 22, 0.8); border: 2px solid var(--surface-border); border-radius: 12px; overflow: hidden; padding: 0 !important; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6); }
 .window-controls { padding: 1.2rem 1.5rem; background: var(--bg-color); border-bottom: 1px solid var(--surface-border); display: flex; gap: 0.7rem; }
 .window-controls span { width: 14px; height: 14px; border-radius: 50%; background: #4a5568; }
 .window-controls span:nth-child(1) { background: #ff5f56; }
