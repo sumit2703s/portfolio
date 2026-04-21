@@ -68,6 +68,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start typing effect exactly when it fades in, giving 500ms lead
     setTimeout(typeEffect, 800);
 
+    // Set Current Year
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+
     // 4. Live Server Uptime Counter (Simulation for styling)
     const uptimeElement = document.getElementById('uptime');
     let secondsTotal = Math.floor(Math.random() * 500000) + 10000; // Random starting uptime
