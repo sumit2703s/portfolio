@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             }, 1800);
 
-            // STAGE 3: Auto-heal (at 5.8s)
+            // STAGE 3: Auto-heal (at 6.8s -> 1.8s + 5.0s)
             stage3Timeout = setTimeout(() => {
                 clearInterval(terminalInterval);
                 container.style.background = 'rgba(2, 44, 34, 0.95)';
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     closeSequence();
                 }, 2500);
                 
-            }, 5800);
+            }, 6800);
         });
     }
 });
