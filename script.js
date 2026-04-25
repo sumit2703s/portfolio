@@ -126,23 +126,36 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             .breach-terminal {
-                display: none; width: 100%; height: 100%; background: transparent;
+                display: none; width: 100%; height: 100%; background: #050505;
                 padding: 2rem; box-sizing: border-box; overflow: hidden;
-                color: #ef4444; text-align: left; align-items: flex-start; flex-direction: column; justify-content: flex-end;
+                color: #d1d5db; text-align: left; align-items: flex-start; flex-direction: column; justify-content: flex-end;
                 position: relative;
+                box-shadow: inset 0 0 100px rgba(0,0,0,0.9);
+            }
+            .breach-terminal::after {
+                content: " "; display: block; position: absolute;
+                top: 0; left: 0; bottom: 0; right: 0;
+                background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+                z-index: 2; background-size: 100% 2px, 3px 100%; pointer-events: none;
             }
             .breach-terminal.active { display: flex; }
             
             .breach-log-line {
-                width: 100%; margin-bottom: 0.5rem; font-size: clamp(0.8rem, 2vw, 1.1rem);
-                text-shadow: 0 0 5px #ef4444;
-                animation: log-glitch 0.15s infinite alternate;
+                width: 100%; margin-bottom: 0.2rem; font-size: clamp(0.75rem, 2vw, 1.05rem);
+                text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+                position: relative; z-index: 3;
             }
-            @keyframes log-glitch {
-                0% { transform: translateX(0); opacity: 1; }
-                50% { transform: translateX(-2px); opacity: 0.8; }
-                100% { transform: translateX(2px); opacity: 1; filter: drop-shadow(0 0 2px red); }
+            .log-crit { color: #ef4444; font-weight: bold; text-shadow: 0 0 5px #ef4444; }
+            .log-alert { color: #fbbf24; font-weight: bold; text-shadow: 0 0 5px #fbbf24; }
+            .log-err { color: #f97316; font-weight: bold; text-shadow: 0 0 5px #f97316; }
+            .log-time { color: #6b7280; margin-right: 8px; font-weight: normal; }
+            
+            .breach-cursor {
+                display: inline-block; width: 10px; height: 1.2em;
+                background-color: #d1d5db; margin-left: 5px; vertical-align: middle;
+                animation: blink-cursor 1s step-end infinite;
             }
+            @keyframes blink-cursor { 50% { opacity: 0; } }
 
             .breach-scanline {
                 position: absolute; top: 0; left: 0; width: 100%; height: 10px;
@@ -298,11 +311,33 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (logIndex < logs.length) {
                         const line = document.createElement('div');
                         line.className = 'breach-log-line';
-                        line.textContent = logs[logIndex];
+                        
+                        let rawLine = logs[logIndex];
+                        let prefix = "";
+                        let prefixClass = "";
+                        
+                        if (rawLine.startsWith("[CRITICAL]")) { prefix = "[CRITICAL]"; prefixClass = "log-crit"; }
+                        else if (rawLine.startsWith("[ALERT]")) { prefix = "[ALERT]"; prefixClass = "log-alert"; }
+                        else if (rawLine.startsWith("[ERROR]")) { prefix = "[ERROR]"; prefixClass = "log-err"; }
+                        
+                        let message = rawLine.substring(prefix.length);
+                        
+                        const now = new Date();
+                        const timeStr = `[${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}.${now.getMilliseconds().toString().padStart(3, '0')}]`;
+                        
+                        line.innerHTML = `<span class="log-time">${timeStr}</span><span class="${prefixClass}">${prefix}</span>${message}`;
                         logContainer.appendChild(line);
+                        
+                        const terminal = document.querySelector('.breach-terminal');
+                        if(terminal) terminal.scrollTop = terminal.scrollHeight;
+                        
                         logIndex++;
                     } else {
                         clearInterval(terminalInterval);
+                        const cursorLine = document.createElement('div');
+                        cursorLine.className = 'breach-log-line';
+                        cursorLine.innerHTML = `<span class="breach-cursor"></span>`;
+                        logContainer.appendChild(cursorLine);
                     }
                 }, 60);
 
