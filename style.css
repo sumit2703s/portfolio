@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;600;700&display=swap');
 
 :root {
-    --bg-color: #0B0F19;
-    --surface-color: rgba(15, 23, 42, 0.7);
-    --surface-border: rgba(59, 130, 246, 0.1);
-    --primary: #3B82F6;
+    --bg-color: #0F172A;
+    --surface-color: rgba(30, 41, 59, 0.7);
+    --surface-border: rgba(139, 92, 246, 0.1);
+    --primary: #8B5CF6;
     --secondary: #94a3b8;
-    --accent: #22C55E;
-    --text-main: #E5E7EB;
+    --accent: #06B6D4;
+    --text-main: #F1F5F9;
     --text-muted: #94a3b8;
     --font-sans: 'Outfit', sans-serif;
     --font-mono: 'Fira Code', monospace;
@@ -33,8 +33,8 @@ body {
 .mesh-bg {
     position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
     background-image: 
-        radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 85% 30%, rgba(34, 197, 94, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 15% 50%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.05) 0%, transparent 50%),
         linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
     background-size: 100% 100%, 100% 100%, 50px 50px, 50px 50px;
@@ -83,7 +83,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 
 /* Base Section - Converted to rem for scalable zoom */
 section { padding: 7rem 2rem; max-width: 95rem; margin: 0 auto; position: relative; }
-.section-title { text-align: left; margin-bottom: 3rem; padding: 0.8rem; border-left: 4px solid var(--primary); background: rgba(59, 130, 246, 0.03); }
+.section-title { text-align: left; margin-bottom: 3rem; padding: 0.8rem; border-left: 4px solid var(--primary); background: rgba(139, 92, 246, 0.03); }
 .section-title h2 { font-size: 1.5rem; font-family: var(--font-mono); font-weight: 600; text-transform: lowercase;}
 .section-title h2::before { content: "sumit@devops:~$ "; color: var(--primary); opacity: 0.7; }
 .section-title h2::after { content: " --list"; color: var(--text-muted); font-size: 1.2rem; font-weight: normal; }
