@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;600;700&display=swap');
 
 :root {
-    --bg-color: #060810;
-    --surface-color: #0d1117;
-    --surface-border: rgba(255, 255, 255, 0.06);
-    --primary: #60a5fa;
-    --secondary: #94a3b8;
-    --accent: #3b82f6;
-    --text-main: #f1f5f9;
-    --text-muted: #64748b;
+    --bg-color: #0d1117;
+    --surface-color: #161b22;
+    --surface-border: #30363d;
+    --primary: #58a6ff;
+    --secondary: #8b949e;
+    --accent: #1f6feb;
+    --text-main: #f0f6fc;
+    --text-muted: #8b949e;
     --highlight: #fbbf24;
-    --glow: rgba(96, 165, 250, 0.08);
+    --glow: rgba(88, 166, 255, 0.1);
     --font-sans: 'Outfit', sans-serif;
     --font-mono: 'Fira Code', monospace;
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -540,9 +540,9 @@ section {
 }
 
 .project-tags span {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--secondary);
+    background: rgba(88, 166, 255, 0.1);
+    border: 1px solid rgba(88, 166, 255, 0.2);
+    color: #58a6ff;
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
     font-size: 0.78rem;
@@ -774,9 +774,9 @@ footer strong {
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--surface-border);
     border-radius: 4px;
-    color: var(--secondary);
+    color: var(--text-main);
     font-family: var(--font-mono);
     font-size: 0.85rem;
     text-decoration: none;
@@ -785,6 +785,7 @@ footer strong {
 
 .btn-project:hover {
     border-color: var(--primary);
-    color: var(--text-main);
+    background: rgba(88, 166, 255, 0.05);
+    color: var(--primary);
     transform: translateY(-2px);
 }
