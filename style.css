@@ -37,7 +37,7 @@ body {
         radial-gradient(circle at 85% 30%, rgba(148, 163, 184, 0.05) 0%, transparent 50%),
         linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+    background-size: 100% 100%, 100% 100%, 50px 50px, 50px 50px;
     z-index: -2; pointer-events: none;
 }
 
