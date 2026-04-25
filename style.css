@@ -33,8 +33,8 @@ body {
 .mesh-bg {
     position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
     background-image: 
-        radial-gradient(circle at 15% 50%, rgba(0, 255, 202, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 85% 30%, rgba(0, 136, 255, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 15% 50%, rgba(250, 204, 21, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(161, 161, 170, 0.05) 0%, transparent 50%);
     z-index: -2; pointer-events: none;
 }
 
@@ -43,7 +43,7 @@ body {
     z-index: -1; pointer-events: none; overflow: hidden;
 }
 .floating-icons i {
-    position: absolute; color: rgba(0, 255, 202, 0.04); font-size: 8rem;
+    position: absolute; color: rgba(250, 204, 21, 0.03); font-size: 8rem;
     animation: float-around 20s infinite linear;
 }
 .float-1 { top: 15%; left: 0%; animation-duration: 25s; font-size: 15rem !important;}
@@ -75,7 +75,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 
 .glass:hover {
     transform: translateY(-5px); border-color: var(--primary);
-    box-shadow: 0 10px 30px rgba(0, 255, 202, 0.15);
+    box-shadow: 0 10px 30px rgba(250, 204, 21, 0.15);
 }
 
 /* Base Section - Converted to rem for scalable zoom */
@@ -97,12 +97,12 @@ section { padding: 7rem 2rem; max-width: 95rem; margin: 0 auto; }
 
 .nav-links { display: flex; list-style: none; gap: 2.5rem; }
 .nav-links a { color: var(--text-main); text-decoration: none; font-weight: 500; font-family: var(--font-mono); font-size: 0.95rem; transition: var(--transition); }
-.nav-links a:hover { color: var(--primary); text-shadow: 0 0 8px rgba(0, 255, 202, 0.5); }
+.nav-links a:hover { color: var(--primary); text-shadow: 0 0 8px rgba(250, 204, 21, 0.5); }
 
 /* Hero Section */
 .hero { min-height: 100vh; display: flex; align-items: center; justify-content: space-between; padding-top: 6rem; gap: 2rem; flex-wrap: wrap; }
 .hero-content { flex: 1; min-width: 300px; max-width: 45rem; z-index: 2; }
-.terminal-badge { display: inline-block; padding: 0.3rem 0.8rem; background: rgba(0, 255, 202, 0.1); border: 1px solid var(--primary); border-radius: 4px; color: var(--primary); font-family: var(--font-mono); font-size: 0.9rem; margin-bottom: 1.5rem; }
+.terminal-badge { display: inline-block; padding: 0.3rem 0.8rem; background: rgba(250, 204, 21, 0.1); border: 1px solid var(--primary); border-radius: 4px; color: var(--primary); font-family: var(--font-mono); font-size: 0.9rem; margin-bottom: 1.5rem; }
 .hero h1 { font-size: 4rem; margin-bottom: 0.5rem; }
 .hero h2 { font-size: 2rem; color: var(--text-muted); margin-bottom: 1.5rem; height: 2.5rem; font-family: var(--font-mono); font-weight: 400;}
 .hero p { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2.5rem; }
@@ -166,7 +166,7 @@ section { padding: 7rem 2rem; max-width: 95rem; margin: 0 auto; }
 .project-card h3::before { content: "cd ./"; color: var(--primary); }
 .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
 .project-tags span {
-    background: rgba(0, 255, 202, 0.1); border: 1px solid rgba(0, 255, 202, 0.3);
+    background: rgba(250, 204, 21, 0.1); border: 1px solid rgba(250, 204, 21, 0.3);
     color: var(--primary); padding: 0.2rem 0.5rem; border-radius: 4px;
     font-size: 0.8rem; font-family: var(--font-mono); white-space: nowrap;
 }
@@ -248,4 +248,4 @@ footer strong { color: var(--primary); }
 /* Project Links */
 .project-links { margin-top: auto; padding-top: 1.5rem; }
 .btn-project { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border: 1px solid var(--surface-border); border-radius: 4px; color: var(--text-main); font-family: var(--font-mono); font-size: 0.85rem; text-decoration: none; transition: var(--transition); }
-.btn-project:hover { background: rgba(0, 255, 202, 0.1); border-color: var(--primary); color: var(--primary); transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0, 255, 202, 0.1); }
+.btn-project:hover { background: rgba(250, 204, 21, 0.1); border-color: var(--primary); color: var(--primary); transform: translateY(-2px); box-shadow: 0 4px 10px rgba(250, 204, 21, 0.1); }
