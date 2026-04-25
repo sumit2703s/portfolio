@@ -184,13 +184,13 @@ section { padding: 7rem 2rem; max-width: 95rem; margin: 0 auto; position: relati
 /* Experience Section - Centered Timeline */
 .centered-timeline {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
-    max-width: 60rem;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
 }
 .centered-timeline .timeline-item {
-    text-align: center;
+    text-align: left;
     width: 100%;
 }
 .timeline-status {
@@ -199,15 +199,15 @@ section { padding: 7rem 2rem; max-width: 95rem; margin: 0 auto; position: relati
 }
 .timeline-date {
     font-family: var(--font-mono); color: var(--secondary); font-size: 1.15rem; margin-bottom: 1rem;
-    display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+    display: flex; align-items: center; justify-content: flex-start; gap: 0.6rem;
 }
 .pulse-dot { width: 10px; height: 10px; background: var(--primary); border-radius: 50%; box-shadow: 0 0 10px var(--primary); animation: blink 2s infinite; }
 .timeline-content h3 { font-size: 1.8rem; color: var(--text-main); margin-bottom: 0.5rem;}
 .timeline-content h4 { font-size: 1.2rem; color: var(--text-muted); font-weight: 400; margin-bottom: 1.5rem; }
 .centered-list {
     text-align: left;
-    max-width: 50rem;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     font-size: 1.05rem;
     color: var(--text-muted);
 }
