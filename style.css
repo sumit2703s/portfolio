@@ -82,10 +82,11 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 }
 
 /* Base Section - Converted to rem for scalable zoom */
-section { padding: 7rem 2rem; max-width: 95rem; margin: 0 auto; }
-.section-title { text-align: center; margin-bottom: 4rem; }
-.section-title h2 { font-size: 2.5rem; font-family: var(--font-mono); font-weight: 600;}
-.section-title h2::before { content: ">_ "; color: var(--primary); }
+section { padding: 7rem 2rem; max-width: 95rem; margin: 0 auto; position: relative; }
+.section-title { text-align: left; margin-bottom: 4rem; padding: 1rem; border-left: 4px solid var(--primary); background: rgba(251, 191, 36, 0.03); }
+.section-title h2 { font-size: 2rem; font-family: var(--font-mono); font-weight: 600; text-transform: lowercase;}
+.section-title h2::before { content: "sumit@devops:~$ "; color: var(--primary); opacity: 0.7; }
+.section-title h2::after { content: " --list"; color: var(--text-muted); font-size: 1.2rem; font-weight: normal; }
 
 /* Navbar */
 .navbar {
