@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;600;700&display=swap');
 
 :root {
-    --bg-color: #030712;
-    --surface-color: rgba(17, 24, 39, 0.6);
-    --surface-border: #1f2937;
-    --primary: #a855f7;
-    --secondary: #3b82f6;
-    --accent: #ec4899;
+    --bg-color: #020617;
+    --surface-color: rgba(15, 23, 42, 0.6);
+    --surface-border: #1e293b;
+    --primary: #00ff9f;
+    --secondary: #00d1ff;
+    --accent: #fcd34d;
     --text-main: #e2e8f0;
     --text-muted: #8b9bb4;
     --font-sans: 'Outfit', sans-serif;
