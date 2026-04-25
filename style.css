@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;600;700&display=swap');
 
 :root {
-    --bg-color: #0d1117;
-    --surface-color: #161b22;
-    --surface-border: #30363d;
+    --bg-color: #0a0c10;
+    --surface-color: #11141a;
+    --surface-border: #1f242c;
     --primary: #58a6ff;
     --secondary: #8b949e;
     --accent: #1f6feb;
     --text-main: #f0f6fc;
     --text-muted: #8b949e;
     --highlight: #fbbf24;
-    --glow: rgba(88, 166, 255, 0.1);
+    --glow: rgba(88, 166, 255, 0.05);
     --font-sans: 'Outfit', sans-serif;
     --font-mono: 'Fira Code', monospace;
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -551,16 +551,18 @@ section {
 }
 
 .opensource-tag {
-    color: var(--text-muted);
+    color: #c9d1d9;
     font-size: 0.85rem;
     font-family: var(--font-mono);
     margin-bottom: 1rem;
     font-weight: normal;
+    opacity: 0.9;
 }
 
 .opensource-tag::before {
     content: "[STATUS]: ";
-    color: rgba(255, 255, 255, 0.15);
+    color: var(--primary);
+    font-weight: 600;
 }
 
 .project-content {
