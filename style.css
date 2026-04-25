@@ -118,8 +118,8 @@ section { padding: 7rem 2rem; max-width: 95rem; margin: 0 auto; }
 .btn-secondary:hover { border-color: var(--text-main); color: var(--text-main); }
 .btn-tertiary { background: var(--primary); color: #000; border: 1px solid var(--primary); }
 .btn-tertiary:hover { background: transparent; color: var(--primary); }
-.hero-buttons { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem; align-items: center; }
-.hero-buttons .btn { min-width: 180px; }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem; align-items: stretch; }
+.hero-buttons .btn { flex: 1; min-width: 160px; max-width: 220px; white-space: nowrap; }
 
 .social-links a { color: var(--text-muted); font-size: 1.8rem; margin-right: 1.5rem; transition: var(--transition); }
 .social-links a:hover { color: var(--primary); transform: translateY(-3px); }
