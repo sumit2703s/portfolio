@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;600;700&display=swap');
 
 :root {
-    --bg-color: #1c1917;
-    --surface-color: #27272a;
-    --surface-border: #fbbf24;
-    --primary: #fbbf24;
-    --secondary: #71717a;
-    --accent: #d97706;
-    --text-main: #fafafa;
-    --text-muted: #a1a1aa;
-    --glow: rgba(251, 191, 36, 0.2);
+    --bg-color: #050b18;
+    --surface-color: #0f172a;
+    --surface-border: #facc15;
+    --primary: #facc15;
+    --secondary: #94a3b8;
+    --accent: #fbbf24;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --glow: rgba(250, 204, 21, 0.2);
     --font-sans: 'Outfit', sans-serif;
     --font-mono: 'Fira Code', monospace;
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -34,11 +34,11 @@ body {
 .mesh-bg {
     position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
     background-image: 
-        radial-gradient(circle at 15% 50%, rgba(251, 191, 36, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 85% 30%, rgba(217, 119, 6, 0.05) 0%, transparent 50%),
-        linear-gradient(rgba(251, 191, 36, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(251, 191, 36, 0.02) 1px, transparent 1px);
-    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+        radial-gradient(circle at 15% 50%, rgba(250, 204, 21, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(148, 163, 184, 0.05) 0%, transparent 50%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 50px 50px, 50px 50px;
     z-index: -2; pointer-events: none;
 }
 
