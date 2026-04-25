@@ -35,9 +35,9 @@ body {
     background-image: 
         radial-gradient(circle at 15% 50%, rgba(251, 191, 36, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 85% 30%, rgba(148, 163, 184, 0.05) 0%, transparent 50%),
-        linear-gradient(rgba(2, 6, 23, 0.9) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(2, 6, 23, 0.9) 1px, transparent 1px);
-    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
     z-index: -2; pointer-events: none;
 }
 
