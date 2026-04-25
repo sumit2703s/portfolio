@@ -116,7 +116,9 @@ section { padding: 7rem 2rem; max-width: 95rem; margin: 0 auto; }
 .btn-primary:hover { box-shadow: inset 0 0 0 2rem var(--primary); color: #000; }
 .btn-secondary { background: transparent; color: var(--text-muted); border: 1px solid var(--surface-border); margin-left: 1rem; }
 .btn-secondary:hover { border-color: var(--text-main); color: var(--text-main); }
-.hero-buttons { display: flex; margin-bottom: 2.5rem; }
+.btn-tertiary { background: var(--primary); color: #000; border: 1px solid var(--primary); margin-left: 1rem; }
+.btn-tertiary:hover { background: transparent; color: var(--primary); }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem; }
 
 .social-links a { color: var(--text-muted); font-size: 1.8rem; margin-right: 1.5rem; transition: var(--transition); }
 .social-links a:hover { color: var(--primary); transform: translateY(-3px); }
