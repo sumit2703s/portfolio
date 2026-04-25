@@ -202,16 +202,30 @@ document.addEventListener('DOMContentLoaded', () => {
             // STAGE 2: Terminal Glitch (at 1.8s)
             stage2Timeout = setTimeout(() => {
                 const logs = [
-                    "[CRITICAL] KERNEL_PANIC: null pointer dereference",
-                    "[ALERT]    UNAUTHORIZED_ROOT_ACCESS — uid=0",
-                    "[CRITICAL] TRACING_IP: 192.168.1.1 → 10.0.0.42",
-                    "[ERROR]    etcd cluster UNREACHABLE — quorum lost",
+                    "[CRITICAL] KERNEL_PANIC: null pointer dereference at 0xffff880039e3a000",
+                    "[ALERT]    UNAUTHORIZED_ROOT_ACCESS — uid=0 gid=0",
+                    "[CRITICAL] TRACING_IP: 192.168.1.1 → 10.0.0.42 → 172.16.0.1",
+                    "[ERROR]    etcd cluster UNREACHABLE — quorum lost on 3/3 nodes",
                     "[ALERT]    kubelet unresponsive on node/sumit-prod-01",
-                    "[CRITICAL] Segmentation fault (core dumped)",
-                    "[ALERT]    FIREWALL BREACH — port 443 exposed",
-                    "[ERROR]    SSL certificate EXPIRED — MITM risk HIGH",
-                    "[CRITICAL] MEMORY OVERFLOW: heap corruption detected",
-                    "[ALERT]    UNAUTHORIZED_SSH: root@10.0.0.42"
+                    "[CRITICAL] Segmentation fault (core dumped) — process: kube-apiserver",
+                    "[ALERT]    FIREWALL BREACH — port 443 exposed to 0.0.0.0",
+                    "[ERROR]    SSL certificate EXPIRED — MITM risk CRITICAL",
+                    "[CRITICAL] MEMORY OVERFLOW: heap corruption detected — 98% consumed",
+                    "[ALERT]    UNAUTHORIZED_SSH: root@10.0.0.42 — brute force detected",
+                    "[ERROR]    Docker daemon CRASHED — all containers terminated",
+                    "[CRITICAL] /dev/sda1 I/O ERROR — filesystem corruption imminent",
+                    "[ALERT]    CPU spike 100% — all cores throttled on sumit-prod-01",
+                    "[ERROR]    DNS resolution FAILED — nameserver 8.8.8.8 unreachable",
+                    "[CRITICAL] OOM Killer activated — PID 1337 terminated",
+                    "[ALERT]    iptables FLUSHED — all rules wiped by unknown process",
+                    "[ERROR]    Redis connection refused — port 6379 unresponsive",
+                    "[CRITICAL] ROOTKIT detected — /proc/hidden_module loaded",
+                    "[ALERT]    GitHub Actions runner HIJACKED — malicious workflow injected",
+                    "[ERROR]    AWS IAM credentials LEAKED — access key exposed in logs",
+                    "[CRITICAL] Kubernetes namespace default DELETED — 12 pods lost",
+                    "[ALERT]    DDOS incoming — 847k req/sec from 23 countries",
+                    "[ERROR]    Terraform state CORRUPTED — infrastructure drift detected",
+                    "[CRITICAL] SYSTEM MELTDOWN — initiating emergency shutdown sequence..."
                 ];
                 
                 container.innerHTML = `
@@ -234,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else {
                         clearInterval(terminalInterval);
                     }
-                }, 200);
+                }, 60);
 
             }, 1800);
 
