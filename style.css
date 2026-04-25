@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;600;700&display=swap');
 
 :root {
-    --bg-color: #082f49;
+    --bg-color: #02141f;
     --surface-color: rgba(15, 23, 42, 0.6);
     --surface-border: rgba(251, 191, 36, 0.2);
     --primary: #facc15;
@@ -36,8 +36,8 @@ body {
     background-image: 
         radial-gradient(circle at 15% 50%, rgba(250, 204, 21, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 85% 30%, rgba(148, 163, 184, 0.05) 0%, transparent 50%),
-        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
     background-size: 100% 100%, 100% 100%, 50px 50px, 50px 50px;
     z-index: -2; pointer-events: none;
 }
