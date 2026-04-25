@@ -15,10 +15,10 @@
     --font-mono: 'Fira Code', monospace;
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     
-    /* Fluid Typography - Balanced */
-    --fs-h1: clamp(2.2rem, 6vw, 3.2rem);
-    --fs-h2: clamp(1.2rem, 4vw, 1.8rem);
-    --fs-body: clamp(0.95rem, 2vw, 1.1rem);
+    /* Fluid Typography - Desktop restored, Mobile safe */
+    --fs-h1: clamp(2.5rem, 6vw, 4rem);
+    --fs-h2: clamp(1.5rem, 4vw, 2rem);
+    --fs-body: clamp(1rem, 2vw, 1.15rem);
 }
 
 * {
